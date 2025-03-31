@@ -276,7 +276,10 @@ header {
     display: flex;
     gap: 15px;
 }
-
+.project-img{
+    height: 200px;
+    width: max-content;
+}
 .project-links a {
     padding: 10px 20px;
     border-radius: 6px;
