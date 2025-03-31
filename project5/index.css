@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #87CEEB, #E0F7FA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.balloon {
+    width: 120px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ff5e5e, #d00000);
+    position: relative;
+    box-shadow: inset -7px -7px 10px rgba(0,0,0,0.2);
+    animation: float 8s ease-in-out infinite;
+}
+.balloon:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    background: #ff5e5e;
+    border-radius: 50%;
+    top: 140px;
+    left: 55px;
+}
+.balloon:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: #795548;
+    top: 155px;
+    left: 59px;
+}
+.basket {
+    width: 40px;
+    height: 25px;
+    background: #8D6E63;
+    position: absolute;
+    top: 255px;
+    left: 40px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: inset -3px -3px 5px rgba(0,0,0,0.3);
+}
+.string-left, .string-right {
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: #795548;
+    top: 155px;
+}
+.string-left {
+    left: 50px;
+    transform: rotate(20deg);
+}
+.string-right {
+    left: 68px;
+    transform: rotate(-20deg);
+}
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: drift linear infinite;
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(5deg);
+    }
+    50% {
+        transform: translateY(-50px) rotate(-5deg);
+    }
+}
+@keyframes drift {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(calc(100vw + 100px));
+    }
+}
+.cloud:nth-child(1) {
+    width: 60px;
+    height: 30px;
+    top: 20%;
+    left: -100px;
+    animation-duration: 30s;
+    animation-delay: 0s;
+}
+.cloud:nth-child(2) {
+    width: 100px;
+    height: 50px;
+    top: 35%;
+    left: -100px;
+    animation-duration: 40s;
+    animation-delay: 5s;
+}
+.cloud:nth-child(3) {
+    width: 80px;
+    height: 40px;
+    top: 60%;
+    left: -100px;
+    animation-duration: 35s;
+    animation-delay: 10s;
+}
+.cloud:nth-child(4) {
+    width: 120px;
+    height: 60px;
+    top: 25%;
+    left: -100px;
+    animation-duration: 50s;
+    animation-delay: 15s;
+}
+.cloud:nth-child(5) {
+    width: 70px;
+    height: 35px;
+    top: 70%;
+    left: -100px;
+    animation-duration: 45s;
+    animation-delay: 20s;
+}
