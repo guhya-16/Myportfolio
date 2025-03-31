@@ -276,10 +276,7 @@ header {
     display: flex;
     gap: 15px;
 }
-.project-img{
-    width: max-content;
-    height: 200px;
-}
+
 .project-links a {
     padding: 10px 20px;
     border-radius: 6px;
@@ -332,3 +329,60 @@ footer {
     background: var(--secondary);
     transform: translateY(-2px);
 }
+
+@media (max-width: 768px) {
+    body { 
+        font-size: 16px;
+    }
+
+    .navbar { 
+        padding: 20px 0;
+    }
+
+    .logo { 
+        font-size: 1.8rem;
+    }
+
+    .nav-links li { 
+        margin-left: 20px;
+    }
+
+    .nav-links a { 
+        font-size: 1rem;
+    }
+
+    section { 
+        padding: 80px 0;
+    }
+
+    .hero-content h1 { 
+        font-size: 2.5rem;
+    }
+
+    .hero-content p { 
+        font-size: 1.2rem;
+    }
+
+    .profile-img { 
+        width: 180px;
+        height: 180px;
+    }
+
+    .section-title h2 { 
+        font-size: 2rem;
+    }
+
+    .about-content { 
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .projects-grid { 
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container { 
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+} 
